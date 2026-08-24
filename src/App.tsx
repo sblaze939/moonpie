@@ -7,6 +7,7 @@ import Letter from './components/Letter'
 import Footer from './components/Footer'
 import ThemeSwitcher from './components/ThemeSwitcher'
 import BirthdayIntro from './components/BirthdayIntro'
+import MusicPlayer from './components/MusicPlayer'
 
 function RoseSvg({ size, opacity, style }: { size: number; opacity: number; style?: React.CSSProperties }) {
   return (
@@ -64,6 +65,7 @@ export default function App() {
   return (
     <>
       {ROSES.map((r, i) => <RoseSvg key={i} {...r} />)}
+      <MusicPlayer />
       <BirthdayIntro />
       <ThemeSwitcher themeName={themeName} onSelect={setTheme} />
       <Hero />

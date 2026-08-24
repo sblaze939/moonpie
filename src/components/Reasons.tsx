@@ -2,14 +2,15 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const reasons = [
-  "The way you laugh — genuinely, fully, like nothing else matters in that moment.",
-  "How you remember the small things I said months ago and bring them up when I least expect it.",
-  "Your stubbornness. It drives me insane. I wouldn't change it.",
-  "The way you can make any ordinary evening feel like a story worth telling.",
-  "That you never let a fight end without fixing it.",
-  "You made me believe that someone could actually know me — the difficult, quiet, overthinking version — and still choose to stay.",
-  "Late nights with you feel shorter than they are. I never want them to end.",
-  "You're my Monica. I didn't know I needed a Monica until I had you.",
+  "The way you laugh — genuinely, fully, like nothing else in the world matters in that moment.",
+  "How you remember small things I said months ago and bring them up when I least expect it.",
+  "Your stubbornness. It drives me insane and I wouldn't change a single thing about it.",
+  "The way you turn any ordinary evening into a story worth telling, without even trying.",
+  "That you never let a fight end without fixing it. Every single time, without fail, you fix it.",
+  "You made me believe someone could know the real me — difficult, quiet, overthinking — and still stay.",
+  "Late nights with you always feel shorter than they actually are. I never want them to end.",
+  "You're my Monica. I didn't know I needed a Monica until I had you, and now I can't imagine not.",
+  "The way you make every place we go feel like it was always ours, right from the very start.",
 ]
 
 function ReasonCard({ text, index }: { text: string; index: number }) {
@@ -32,6 +33,10 @@ function ReasonCard({ text, index }: { text: string; index: number }) {
         transition: 'border-color 0.3s ease',
         position: 'relative',
         overflow: 'hidden',
+        minHeight: '168px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
       }}
     >
       <span
@@ -49,7 +54,7 @@ function ReasonCard({ text, index }: { text: string; index: number }) {
       >
         {String(index + 1).padStart(2, '0')}
       </span>
-      <p style={{ fontSize: '0.95rem', color: 'var(--text)', lineHeight: 1.75 }}>
+      <p style={{ fontSize: '0.92rem', color: 'var(--text)', lineHeight: 1.72, margin: 0 }}>
         {text}
       </p>
     </motion.div>
@@ -71,10 +76,11 @@ export default function Reasons() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '20px',
           }}
         >
+          <style>{`@media(max-width:720px){.reasons-grid{grid-template-columns:1fr!important}}.reasons-grid{grid-template-columns:repeat(3,1fr)}`}</style>
           {reasons.map((reason, i) => (
             <ReasonCard key={i} text={reason} index={i} />
           ))}

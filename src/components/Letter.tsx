@@ -77,14 +77,17 @@ export default function Letter() {
             </p>
 
             <p style={{ marginBottom: '32px' }}>
-              I'm sorry for the times I wasn't present. I'm working on it.
+              I know I'm not always expressive. I've probably gotten on your nerves without meaning to,
+              and I've hurt you in ways I didn't intend — and each time that happened, it broke something
+              in me too. When you cry and I don't know what to say or do, that helplessness is one of the
+              worst feelings I know. But I'm not giving up on figuring it out. On becoming someone who's
+              better at this. For you.
             </p>
 
             <p style={{ marginBottom: '12px' }}>Happy Birthday, my Moonpie.</p>
 
             <p style={{ marginBottom: '32px' }}>
-              You deserve the whole world and I'm going to spend a very long time trying to give it to
-              you.
+              You deserve every good thing. I hope you know that.
             </p>
 
             <p style={{ color: 'var(--accent)', fontStyle: 'italic' }}>

@@ -16,7 +16,7 @@ export default function Footer() {
           marginBottom: '10px',
         }}
       >
-        Made with too much love and very little sleep — Your Chandler Bing 🌙
+        Made with too much love and every good thing I feel about you — Your Chandler Bing 🌙
       </p>
       <p
         style={{

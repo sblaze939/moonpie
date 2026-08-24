@@ -132,7 +132,7 @@ export default function Hero() {
             maxWidth: '500px',
           }}
         >
-          My Monica. My person. My everything.
+          My Monica. My peace. My whole world.
         </motion.p>
       </div>
 

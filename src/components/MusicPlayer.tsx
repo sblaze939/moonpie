@@ -44,11 +44,13 @@ export default function MusicPlayer() {
     e.stopPropagation()
     if (!audioRef.current) return
     if (muted) {
-      audioRef.current.volume = 0.18
+      audioRef.current.play().catch(() => {})
       setMuted(false)
+      setPlaying(true)
     } else {
-      audioRef.current.volume = 0
+      audioRef.current.pause()
       setMuted(true)
+      setPlaying(false)
     }
   }
 

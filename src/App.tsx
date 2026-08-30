@@ -16,7 +16,7 @@ function RoseSvg({ size, opacity, style }: { size: number; opacity: number; styl
       height={size}
       viewBox="0 0 200 200"
       aria-hidden="true"
-      style={{ position: 'fixed', pointerEvents: 'none', zIndex: 0, ...style }}
+      style={{ position: 'fixed', pointerEvents: 'none', zIndex: 1, ...style }}
     >
       {/* Outer petals — 6 */}
       {[0,60,120,180,240,300].map(deg => (
